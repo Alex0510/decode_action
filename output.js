@@ -1,171 +1,733 @@
-//Sun Jul 21 2024 04:07:24 GMT+0000 (Coordinated Universal Time)
+//Sun Jul 21 2024 05:34:05 GMT+0000 (Coordinated Universal Time)
 //Base:https://github.com/echo094/decode-js
 //Modify:https://github.com/smallfawn/decode_action
-var iｉl = "jsjiami.cn.v7";
-function lIiiiII1(_0x625157, _0xb2c082) {
-  var _0x1cfebf = lliIIil1();
-  return lIiiiII1 = function (_0x45a455, _0xe6572c) {
-    _0x45a455 = _0x45a455 - 108;
-    var _0x2b3b2f = _0x1cfebf[_0x45a455];
-    if (lIiiiII1["tDgzYo"] === undefined) {
-      var _0xa8ab2c = function (_0x4c6b23) {
-        var _0x31e970 = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+/=";
-        var _0x3e3c3a = "",
-          _0x4deb0b = "",
-          _0x5c3c80 = _0x3e3c3a + _0xa8ab2c;
-        for (var _0x428ad4 = 0, _0xb6c82b, _0x3d6e84, _0x6cecc2 = 0; _0x3d6e84 = _0x4c6b23["charAt"](_0x6cecc2++); ~_0x3d6e84 && (_0xb6c82b = _0x428ad4 % 4 ? _0xb6c82b * 64 + _0x3d6e84 : _0x3d6e84, _0x428ad4++ % 4) ? _0x3e3c3a += _0x5c3c80["charCodeAt"](_0x6cecc2 + 10) - 10 !== 0 ? String["fromCharCode"](255 & _0xb6c82b >> (-2 * _0x428ad4 & 6)) : _0x428ad4 : 0) {
-          _0x3d6e84 = _0x31e970["indexOf"](_0x3d6e84);
-        }
-        for (var _0x49408f = 0, _0xa9dc16 = _0x3e3c3a["length"]; _0x49408f < _0xa9dc16; _0x49408f++) {
-          _0x4deb0b += "%" + ("00" + _0x3e3c3a["charCodeAt"](_0x49408f)["toString"](16))["slice"](-2);
-        }
-        return decodeURIComponent(_0x4deb0b);
-      };
-      var _0x3f5db6 = function (_0xa87e8b, _0x246d86) {
-        var _0x1b2dc3 = [],
-          _0x39222f = 0,
-          _0x3bb8d1,
-          _0x5573a7 = "";
-        _0xa87e8b = _0xa8ab2c(_0xa87e8b);
-        var _0x146e2d;
-        for (_0x146e2d = 0; _0x146e2d < 256; _0x146e2d++) {
-          _0x1b2dc3[_0x146e2d] = _0x146e2d;
-        }
-        for (_0x146e2d = 0; _0x146e2d < 256; _0x146e2d++) {
-          _0x39222f = (_0x39222f + _0x1b2dc3[_0x146e2d] + _0x246d86["charCodeAt"](_0x146e2d % _0x246d86["length"])) % 256, _0x3bb8d1 = _0x1b2dc3[_0x146e2d], _0x1b2dc3[_0x146e2d] = _0x1b2dc3[_0x39222f], _0x1b2dc3[_0x39222f] = _0x3bb8d1;
-        }
-        _0x146e2d = 0, _0x39222f = 0;
-        for (var _0x2eb452 = 0; _0x2eb452 < _0xa87e8b["length"]; _0x2eb452++) {
-          _0x146e2d = (_0x146e2d + 1) % 256, _0x39222f = (_0x39222f + _0x1b2dc3[_0x146e2d]) % 256, _0x3bb8d1 = _0x1b2dc3[_0x146e2d], _0x1b2dc3[_0x146e2d] = _0x1b2dc3[_0x39222f], _0x1b2dc3[_0x39222f] = _0x3bb8d1, _0x5573a7 += String["fromCharCode"](_0xa87e8b["charCodeAt"](_0x2eb452) ^ _0x1b2dc3[(_0x1b2dc3[_0x146e2d] + _0x1b2dc3[_0x39222f]) % 256]);
-        }
-        return _0x5573a7;
-      };
-      lIiiiII1["BhQiqc"] = _0x3f5db6, _0x625157 = arguments, lIiiiII1["tDgzYo"] = !![];
+const iilIlIiI = new Env("bluedvip");
+(async () => {
+  try {
+    function lii11I1i(Iiii1i1I) {
+      return btoa(Iiii1i1I);
     }
-    var _0x2c2e5c = _0x1cfebf[0],
-      _0x2f9159 = _0x45a455 + _0x2c2e5c,
-      _0x55d62f = _0x625157[_0x2f9159];
-    if (!_0x55d62f) {
-      if (lIiiiII1["cOHVyz"] === undefined) {
-        var _0x5bcfaa = function (_0x36c0e8) {
-          this["rIFNRi"] = _0x36c0e8, this["qCxbBU"] = [1, 0, 0], this["AJolsb"] = function () {
-            return "newState";
-          }, this["Qyzbap"] = "\\w+ *\\(\\) *{\\w+ *", this["CtxSuQ"] = "['|\"].+['|\"];? *}";
+    function liIiiiii(l1i1lil1) {
+      return atob(l1i1lil1);
+    }
+    async function iii1I11i() {
+      const Iiil1 = await fetch("https://gist.githubusercontent.com/Alex0510/2f220cbae58f770e572c688594d52393/raw/password.js"),
+        II11l1lI = await Iiil1.text();
+      return II11l1lI.trim();
+    }
+    const IlII1Ili = iilIlIiI.getdata("EricPassword"),
+      Ili1lIl1 = iilIlIiI.getdata("scriptvip");
+    function lI1IIIIi(iIll1IIl) {
+      const Iil1lil = lii11I1i(iIll1IIl);
+      return Iil1lil === I11IiIli;
+    }
+    !IlII1Ili && iilIlIiI.setdata("TG联系咨询", "EricPassword");
+    const I11IiIli = await iii1I11i();
+    if (Ili1lIl1 !== "true") {
+      console.log("Script is disabled via BoxJS.");
+      iilIlIiI.done({});
+      return;
+    }
+    let Iiilii1 = $response.body,
+      I1ii1i1i = JSON.parse(Iiilii1);
+    console.log("Original response body:", JSON.stringify(I1ii1i1i, null, 2));
+    const lIiIii1I = /users\/(\d+)/,
+      l1Illl11 = $request.url.match(lIiIii1I);
+    if (!lI1IIIIi(IlII1Ili)) console.error("密码验证失败"), $done({
+      "body": JSON.stringify({
+        "error": "密码验证失败，请检查 BoxJS 配置"
+      })
+    });else {
+      if (l1Illl11) {
+        const iiIIi1l1 = l1Illl11[1],
+          IlilIiIi = "https://argo.blued.cn/users/" + iiIIi1l1 + "/basic";
+        console.log("User ID:", iiIIi1l1);
+        console.log("Fetching URL:", IlilIiIi);
+        const I1IiI1 = $request.headers.authorization;
+        console.log("Authorization header:", I1IiI1);
+        const IIiiIll = {
+          "authority": "argo.blued.cn",
+          "accept": "*/*",
+          "x-client-color": "light",
+          "content-type": "application/json",
+          "accept-encoding": "gzip, deflate, br",
+          "user-agent": "Mozilla/5.0 (iPhone; iOS 16.1.1; Scale/3.00) iOS/300907_0.9.7_6972_0921 (Asia/Shanghai) app/1",
+          "accept-language": "zh-CN",
+          "authorization": I1IiI1
         };
-        _0x5bcfaa["prototype"]["jeExsE"] = function () {
-          var _0x46673d = new RegExp(this["Qyzbap"] + this["CtxSuQ"]),
-            _0x2119fb = _0x46673d["test"](this["AJolsb"]["toString"]()) ? --this["qCxbBU"][1] : --this["qCxbBU"][0];
-          return this["HjFjkQ"](_0x2119fb);
-        }, _0x5bcfaa["prototype"]["HjFjkQ"] = function (_0x5a7676) {
-          if (!Boolean(~_0x5a7676)) return _0x5a7676;
-          return this["MZrDfN"](this["rIFNRi"]);
-        }, _0x5bcfaa["prototype"]["MZrDfN"] = function (_0x3669d4) {
-          for (var _0x1bb591 = 0, _0x3e2028 = this["qCxbBU"]["length"]; _0x1bb591 < _0x3e2028; _0x1bb591++) {
-            this["qCxbBU"]["push"](Math["round"](Math["random"]())), _0x3e2028 = this["qCxbBU"]["length"];
-          }
-          return _0x3669d4(this["qCxbBU"][0]);
-        }, new _0x5bcfaa(lIiiiII1)["jeExsE"](), lIiiiII1["cOHVyz"] = !![];
-      }
-      _0x2b3b2f = lIiiiII1["BhQiqc"](_0x2b3b2f, _0xe6572c), _0x625157[_0x2f9159] = _0x2b3b2f;
-    } else _0x2b3b2f = _0x55d62f;
-    return _0x2b3b2f;
-  }, lIiiiII1(_0x625157, _0xb2c082);
-}
-((function (IIliIili, llllI11l, lI1IIliI, Iilili1I, iiilI1, Iliii1l1, ll1lliIi) {
-  return IIliIili = IIliIili >> 2, Iliii1l1 = "hs", ll1lliIi = "hs", function (I1llil1l, iiIIIi1I, llIl1IiI, iII1il11, IiIl1lli) {
-    var Ii11llI = lIiiiII1;
-    iII1il11 = "tfi", Iliii1l1 = iII1il11 + Iliii1l1, IiIl1lli = "up", ll1lliIi += IiIl1lli, Iliii1l1 = llIl1IiI(Iliii1l1), ll1lliIi = llIl1IiI(ll1lliIi), llIl1IiI = 0;
-    var il111II = I1llil1l();
-    while (!![] && --Iilili1I + iiIIIi1I) {
-      try {
-        iII1il11 = parseInt(Ii11llI(143, "@VpW")) / 1 * (parseInt(Ii11llI(125, "yoRV")) / 2) + parseInt(Ii11llI(108, "Y2c#")) / 3 * (parseInt(Ii11llI(145, "mHZC")) / 4) + parseInt(Ii11llI(148, "^[Yc")) / 5 * (-parseInt(Ii11llI(129, "MD4q")) / 6) + -parseInt(Ii11llI(127, "M7YW")) / 7 + parseInt(Ii11llI(124, "WZZH")) / 8 * (-parseInt(Ii11llI(120, "gJZ8")) / 9) + -parseInt(Ii11llI(130, "$fU$")) / 10 + parseInt(Ii11llI(131, "WZZH")) / 11;
-      } catch (lII1i1li) {
-        iII1il11 = llIl1IiI;
-      } finally {
-        IiIl1lli = il111II[Iliii1l1]();
-        if (IIliIili <= Iilili1I) llIl1IiI ? iiilI1 ? iII1il11 = IiIl1lli : iiilI1 = IiIl1lli : llIl1IiI = IiIl1lli;else {
-          if (llIl1IiI == iiilI1["replace"](/[ASNrpPhTBbdwWFJLufOYKG=]/g, "")) {
-            if (iII1il11 === iiIIIi1I) {
-              il111II["un" + Iliii1l1](IiIl1lli);
-              break;
-            }
-            il111II[ll1lliIi](IiIl1lli);
-          }
-        }
-      }
-    }
-  }(lI1IIliI, llllI11l, function (Illi1II1, IllI11l, il11iIIi, IIliiiIl, i1llI11I, li1llIi, iiIiII) {
-    return IllI11l = "split", Illi1II1 = arguments[0], Illi1II1 = Illi1II1[IllI11l](""), il11iIIi = `\x72\x65\x76\x65\x72\x73\x65`, Illi1II1 = Illi1II1[il11iIIi]("v"), IIliiiIl = `\x6a\x6f\x69\x6e`, (1548209, Illi1II1[IIliiiIl](""));
-  });
-})(752, 119978, lliIIil1, 190), lliIIil1) && (iｉl = `\x812`);
-function lliIIil1() {
-  var llIlIiiI = function () {
-    return ["i\uFF49l", "fjThsuFjriAwWami.wJcGOLnSK.rbvP7bpBYJdN==", "WQxcTxODWOjs", "rSkRFSoVW73dKeW3sSowW7pdUW", "WPeOwSkk5BUXz8kV5PY1dmor5PsZyIhdG3aHASkIBUAAJEAxJG", "W7PZW4axW5X3qa", "W5b9cColW6y/", "W4n4WRerWPVcMLG", "WRldLNlcGCkC", "5PYj6zAE6Aop6k6i6ici57gXm8kfWRJdKdpdJ8k/W73dObDShZS", "cCkYDmoyW6tcVSk+tq", "egNcJCkuva", "W6/dTf5XoW", "WOdcVmo3ccS", "Bg9qb8k4W7pdKCobWODZgSkZW70", "W4JdU3iHgbFdNCoUW4eKWQmB", "fSo3iCkUWQtcGN4", "WP7cLe7dO8k5", "WRNcR33cQ0W", "svGbsCkoW4NdI1y", "WOFcSGq1twqOaMtdPSkv", "ifXOmmozAmkummkfD3Kv", "u8k3v0tdVSosW5pdQCoZfmoVgG", "vSo5vaddUCkzWR7dR8ksdSkOcxC", "WQSTqh3dO8o7WRNdLSkScubG", "W53dNCkjwfnRWPVcJmkDbmkBWPhcNa", "tLzHn8oyWO3cO2tcU2BcS2dcLW", "W5VdSY/cJSoJWRnbWOPAw8oiW6e", "jcevzmoev0CKW7ddPMNcSW", "WRT8DL4l", "p8oaoCo5W5pdS8kgdXuqWQi", "gKVdQCkTeCkNWR1RW7qiWQ9Q", "uCoLsW", "W4b3bSokW7eLW6TEs8koWQq", "WPiTg8ovW64NW4T3", "W5KIl8kqW67dJSkYWR7dSSksjba", "WQK2sCkq", "h8oPlmkyWOC", "W70BW6iVW7bniq", "WO8cBK4Vaue/WOWHoSkteCkXW5mvW4pdJxlcVxD4", "WRldGSoxr33cJSka", "ytOTd8kVw8oNW7xcPeDaWOldGW", "BMFcOI3dLG", "W4ddTKBcG0xdLSoYWQm", "WOFcP2xcOuu", "mbCMtmok", "WRSeW5GbW5Huavq"];
-  }();
-  lliIIil1 = function () {
-    return llIlIiiI;
-  };
-  return lliIIil1();
-}
-;
-(function (lIli1IiI, llllII) {
-  var i111Iil1 = lIiiiII1,
-    i11lI1I = {
-      "jqcBB": i111Iil1(128, "M7YW"),
-      "vdPNk": i111Iil1(126, "$2GK"),
-      "ScEOw": function (lIllIilI, IIii1lI1, iiiIl) {
-        return lIllIilI(IIii1lI1, iiiIl);
-      },
-      "QrlrD": i111Iil1(114, "RMc5"),
-      "lYFeH": i111Iil1(144, "&Tb2"),
-      "KjkjB": function (l11llIi) {
-        return l11llIi();
-      },
-      "HlHDb": i111Iil1(109, "6%bf")
-    },
-    il1ll1il = i11lI1I[i111Iil1(142, "Y2c#")][i111Iil1(134, "HdkG")]("|"),
-    lilIii1l = 0;
-  while (!![]) {
-    switch (il1ll1il[lilIii1l++]) {
-      case "0":
-        var iIl1II1 = function () {
-          var liiiiiII = !![];
-          return function (IillIlII, Iililli1) {
-            var liI1l1li = liiiiiII ? function () {
-              var ilI1Ii1 = lIiiiII1;
-              if (Iililli1) {
-                var I1i1iIil = Iililli1[ilI1Ii1(150, "vqUt")](IillIlII, arguments);
-                return Iililli1 = null, I1i1iIil;
+        $httpClient.get({
+          "url": IlilIiIi,
+          "headers": IIiiIll
+        }, function (lii1Iili, I1i1li, lI1l1Ili) {
+          if (lii1Iili) console.error("Error fetching data:", lii1Iili), lllI111(I1ii1i1i);else try {
+            let iiliIil = JSON.parse(lI1l1Ili);
+            console.log("Fetched data:", JSON.stringify(iiliIil, null, 2));
+            if (iiliIil && iiliIil.data && iiliIil.data.length > 0) {
+              const llIIIIiI = iiliIil.data[0];
+              if (llIIIIiI.last_operate !== undefined && llIIIIiI.distance !== undefined) {
+                console.log("Fetched data contains required fields");
+                const i1IIIi1i = llIIIIiI.last_operate,
+                  II1Iiili = parseFloat(llIIIIiI.distance).toFixed(2) + "km";
+                if (I1ii1i1i.data && I1ii1i1i.data.length > 0) {
+                  const l1Iiil = I1ii1i1i.data[0];
+                  console.log("Original last_operate:", l1Iiil.last_operate);
+                  console.log("Original distance:", l1Iiil.distance);
+                  l1Iiil.last_operate = i1IIIi1i;
+                  l1Iiil.location = II1Iiili;
+                  l1Iiil.is_hide_distance = 0;
+                  l1Iiil.is_hide_last_operate = 0;
+                  l1Iiil.is_global_view_secretly = 1;
+                  l1Iiil.is_invisible_all = 1;
+                  l1Iiil.presonal_private_switch = 1;
+                  l1Iiil.is_role_stealth = 1;
+                  l1Iiil.black_allowed_count = 999;
+                  l1Iiil.is_traceless_access = 1;
+                  l1Iiil.avatar = l1Iiil.latest_avatar;
+                  console.log("Updated last_operate:", l1Iiil.last_operate);
+                  console.log("Updated distance:", l1Iiil.location);
+                  console.log("Updated avatar:", l1Iiil.avatar);
+                } else console.error("Original response does not contain required data fields");
+                llIIIIiI.is_hide_distance = 0;
+                llIIIIiI.is_hide_last_operate = 0;
+                console.log("Modified fetched data:", JSON.stringify(llIIIIiI, null, 2));
+              } else {
+                console.error("Fetched data does not contain required fields");
               }
-            } : function () {};
-            return liiiiiII = ![], liI1l1li;
-          };
-        }();
-        continue;
-      case "1":
-        var I1I1llI = {
-          "wWTXo": i11lI1I[i111Iil1(149, "^[Yc")]
-        };
-        continue;
-      case "2":
-        var iI1IIl1l = i11lI1I[i111Iil1(116, "huQ&")](iIl1II1, this, function () {
-          var iIl1llil = i111Iil1;
-          return iI1IIl1l[iIl1llil(151, "@VpW")]()[iIl1llil(152, "V%YD")](I1I1llI[iIl1llil(147, "^rWE")])[iIl1llil(151, "@VpW")]()[iIl1llil(138, "6%bf")](iI1IIl1l)[iIl1llil(111, "6%bf")](I1I1llI[iIl1llil(122, "w&Wq")]);
+              console.log("Modified response body:", JSON.stringify(I1ii1i1i, null, 2));
+              $done({
+                "body": JSON.stringify(I1ii1i1i)
+              });
+            } else console.error("Fetched data does not contain required fields"), lllI111(I1ii1i1i);
+          } catch (l1llll1l) {
+            console.error("Error parsing data:", l1llll1l);
+            lllI111(I1ii1i1i);
+          }
         });
-        continue;
-      case "3":
-        llllII[i111Iil1(121, "Y2c#")] = i11lI1I[i111Iil1(117, "yoRV")];
-        continue;
-      case "4":
-        console[i111Iil1(137, "9^qN")](i11lI1I[i111Iil1(118, "$fU$")]);
-        continue;
-      case "5":
-        i11lI1I[i111Iil1(113, "ZzYc")](iI1IIl1l);
-        continue;
-      case "6":
-        lIli1IiI[i111Iil1(141, "Wuz]")] = i11lI1I[i111Iil1(123, "^[Yc")];
-        continue;
+      } else {
+        $done({
+          "body": JSON.stringify(I1ii1i1i)
+        });
+      }
+      function lllI111(lilIl1l1) {
+        if (lilIl1l1.data && lilIl1l1.data.length > 0) {
+          lilIl1l1.data[0].is_hide_distance = 0;
+          lilIl1l1.data[0].is_hide_last_operate = 0;
+          lilIl1l1.data[0].is_global_view_secretly = 1;
+          lilIl1l1.data[0].is_invisible_all = 1;
+          lilIl1l1.data[0].presonal_private_switch = 1;
+          lilIl1l1.data[0].is_role_stealth = 1;
+          lilIl1l1.data[0].black_allowed_count = 999;
+          lilIl1l1.data[0].is_traceless_access = 1;
+          lilIl1l1.data[0].avatar = lilIl1l1.data[0].latest_avatar;
+          delete lilIl1l1.data[0].distance;
+        }
+        $done({
+          "body": JSON.stringify(lilIl1l1)
+        });
+      }
     }
-    break;
+  } catch (li111IiI) {
+    console.error(li111IiI);
+    $done({});
   }
-})(window, document);
+})();
+function Env(t, e) {
+  class s {
+    constructor(t) {
+      this.env = t;
+    }
+    send(t, e = "GET") {
+      t = "string" == typeof t ? {
+        url: t
+      } : t;
+      let s = this.get;
+      "POST" === e && (s = this.post);
+      const i = new Promise((e, i) => {
+        s.call(this, t, (t, s, o) => {
+          t ? i(t) : e(s);
+        });
+      });
+      return t.timeout ? ((t, e = 1000) => Promise.race([t, new Promise((t, s) => {
+        setTimeout(() => {
+          s(new Error("请求超时"));
+        }, e);
+      })]))(i, t.timeout) : i;
+    }
+    get(t) {
+      return this.send.call(this.env, t);
+    }
+    post(t) {
+      return this.send.call(this.env, t, "POST");
+    }
+  }
+  return new class {
+    constructor(t, e) {
+      this.logLevels = {
+        debug: 0,
+        info: 1,
+        warn: 2,
+        error: 3
+      };
+      this.logLevelPrefixs = {
+        debug: "[DEBUG] ",
+        info: "[INFO] ",
+        warn: "[WARN] ",
+        error: "[ERROR] "
+      };
+      this.logLevel = "info";
+      this.name = t;
+      this.http = new s(this);
+      this.data = null;
+      this.dataFile = "box.dat";
+      this.logs = [];
+      this.isMute = !1;
+      this.isNeedRewrite = !1;
+      this.logSeparator = "\n";
+      this.encoding = "utf-8";
+      this.startTime = new Date().getTime();
+      Object.assign(this, e);
+      this.log("", `🔔${this.name}, 开始!`);
+    }
+    getEnv() {
+      return "undefined" != typeof $environment && $environment["surge-version"] ? "Surge" : "undefined" != typeof $environment && $environment["stash-version"] ? "Stash" : "undefined" != typeof module && module.exports ? "Node.js" : "undefined" != typeof $task ? "Quantumult X" : "undefined" != typeof $loon ? "Loon" : "undefined" != typeof $rocket ? "Shadowrocket" : void 0;
+    }
+    isNode() {
+      return "Node.js" === this.getEnv();
+    }
+    isQuanX() {
+      return "Quantumult X" === this.getEnv();
+    }
+    isSurge() {
+      return "Surge" === this.getEnv();
+    }
+    isLoon() {
+      return "Loon" === this.getEnv();
+    }
+    isShadowrocket() {
+      return "Shadowrocket" === this.getEnv();
+    }
+    isStash() {
+      return "Stash" === this.getEnv();
+    }
+    toObj(t, e = null) {
+      try {
+        return JSON.parse(t);
+      } catch {
+        return e;
+      }
+    }
+    toStr(t, e = null, ...s) {
+      try {
+        return JSON.stringify(t, ...s);
+      } catch {
+        return e;
+      }
+    }
+    getjson(t, e) {
+      let s = e;
+      if (this.getdata(t)) try {
+        s = JSON.parse(this.getdata(t));
+      } catch {}
+      return s;
+    }
+    setjson(t, e) {
+      try {
+        return this.setdata(JSON.stringify(t), e);
+      } catch {
+        return !1;
+      }
+    }
+    getScript(t) {
+      return new Promise(e => {
+        this.get({
+          url: t
+        }, (t, s, i) => e(i));
+      });
+    }
+    runScript(t, e) {
+      return new Promise(s => {
+        let i = this.getdata("@chavy_boxjs_userCfgs.httpapi");
+        i = i ? i.replace(/\n/g, "").trim() : i;
+        let o = this.getdata("@chavy_boxjs_userCfgs.httpapi_timeout");
+        o = o ? 1 * o : 20;
+        o = e && e.timeout ? e.timeout : o;
+        const [r, a] = i.split("@"),
+          n = {
+            url: `http://${a}/v1/scripting/evaluate`,
+            body: {
+              script_text: t,
+              mock_type: "cron",
+              timeout: o
+            },
+            headers: {
+              "X-Key": r,
+              Accept: "*/*"
+            },
+            policy: "DIRECT",
+            timeout: o
+          };
+        this.post(n, (t, e, i) => s(i));
+      }).catch(t => this.logErr(t));
+    }
+    loaddata() {
+      if (!this.isNode()) return {};
+      {
+        this.fs = this.fs ? this.fs : require("fs");
+        this.path = this.path ? this.path : require("path");
+        const t = this.path.resolve(this.dataFile),
+          e = this.path.resolve(process.cwd(), this.dataFile),
+          s = this.fs.existsSync(t),
+          i = !s && this.fs.existsSync(e);
+        if (!s && !i) return {};
+        {
+          const i = s ? t : e;
+          try {
+            return JSON.parse(this.fs.readFileSync(i));
+          } catch (t) {
+            return {};
+          }
+        }
+      }
+    }
+    writedata() {
+      if (this.isNode()) {
+        this.fs = this.fs ? this.fs : require("fs");
+        this.path = this.path ? this.path : require("path");
+        const t = this.path.resolve(this.dataFile),
+          e = this.path.resolve(process.cwd(), this.dataFile),
+          s = this.fs.existsSync(t),
+          i = !s && this.fs.existsSync(e),
+          o = JSON.stringify(this.data);
+        s ? this.fs.writeFileSync(t, o) : i ? this.fs.writeFileSync(e, o) : this.fs.writeFileSync(t, o);
+      }
+    }
+    lodash_get(t, e, s) {
+      const i = e.replace(/\[(\d+)\]/g, ".$1").split(".");
+      let o = t;
+      for (const t of i) if (o = Object(o)[t], void 0 === o) return s;
+      return o;
+    }
+    lodash_set(t, e, s) {
+      return Object(t) !== t || (Array.isArray(e) || (e = e.toString().match(/[^.[\]]+/g) || []), e.slice(0, -1).reduce((t, s, i) => Object(t[s]) === t[s] ? t[s] : t[s] = Math.abs(e[i + 1]) >> 0 == +e[i + 1] ? [] : {}, t)[e[e.length - 1]] = s), t;
+    }
+    getdata(t) {
+      let e = this.getval(t);
+      if (/^@/.test(t)) {
+        const [, s, i] = /^@(.*?)\.(.*?)$/.exec(t),
+          o = s ? this.getval(s) : "";
+        if (o) try {
+          const t = JSON.parse(o);
+          e = t ? this.lodash_get(t, i, "") : e;
+        } catch (t) {
+          e = "";
+        }
+      }
+      return e;
+    }
+    setdata(t, e) {
+      let s = false;
+      if (/^@/.test(e)) {
+        const [, i, o] = /^@(.*?)\.(.*?)$/.exec(e),
+          r = this.getval(i),
+          a = i ? "null" === r ? null : r || "{}" : "{}";
+        try {
+          const e = JSON.parse(a);
+          this.lodash_set(e, o, t);
+          s = this.setval(JSON.stringify(e), i);
+        } catch (e) {
+          const r = {};
+          this.lodash_set(r, o, t);
+          s = this.setval(JSON.stringify(r), i);
+        }
+      } else s = this.setval(t, e);
+      return s;
+    }
+    getval(t) {
+      switch (this.getEnv()) {
+        case "Surge":
+        case "Loon":
+        case "Stash":
+        case "Shadowrocket":
+          return $persistentStore.read(t);
+        case "Quantumult X":
+          return $prefs.valueForKey(t);
+        case "Node.js":
+          return this.data = this.loaddata(), this.data[t];
+        default:
+          return this.data && this.data[t] || null;
+      }
+    }
+    setval(t, e) {
+      switch (this.getEnv()) {
+        case "Surge":
+        case "Loon":
+        case "Stash":
+        case "Shadowrocket":
+          return $persistentStore.write(t, e);
+        case "Quantumult X":
+          return $prefs.setValueForKey(t, e);
+        case "Node.js":
+          return this.data = this.loaddata(), this.data[e] = t, this.writedata(), !0;
+        default:
+          return this.data && this.data[e] || null;
+      }
+    }
+    initGotEnv(t) {
+      this.got = this.got ? this.got : require("got");
+      this.cktough = this.cktough ? this.cktough : require("tough-cookie");
+      this.ckjar = this.ckjar ? this.ckjar : new this.cktough.CookieJar();
+      t && (t.headers = t.headers ? t.headers : {}, t && (t.headers = t.headers ? t.headers : {}, void 0 === t.headers.cookie && void 0 === t.headers.Cookie && void 0 === t.cookieJar && (t.cookieJar = this.ckjar)));
+    }
+    get(t, e = () => {}) {
+      switch (t.headers && (delete t.headers["Content-Type"], delete t.headers["Content-Length"], delete t.headers["content-type"], delete t.headers["content-length"]), t.params && (t.url += "?" + this.queryStr(t.params)), void 0 === t.followRedirect || t.followRedirect || ((this.isSurge() || this.isLoon()) && (t["auto-redirect"] = !1), this.isQuanX() && (t.opts ? t.opts.redirection = !1 : t.opts = {
+        redirection: !1
+      })), this.getEnv()) {
+        case "Surge":
+        case "Loon":
+        case "Stash":
+        case "Shadowrocket":
+        default:
+          this.isSurge() && this.isNeedRewrite && (t.headers = t.headers || {}, Object.assign(t.headers, {
+            "X-Surge-Skip-Scripting": !1
+          })), $httpClient.get(t, (t, s, i) => {
+            !t && s && (s.body = i, s.statusCode = s.status ? s.status : s.statusCode, s.status = s.statusCode);
+            e(t, s, i);
+          });
+          break;
+        case "Quantumult X":
+          this.isNeedRewrite && (t.opts = t.opts || {}, Object.assign(t.opts, {
+            hints: !1
+          })), $task.fetch(t).then(t => {
+            const {
+              statusCode: s,
+              statusCode: i,
+              headers: o,
+              body: r,
+              bodyBytes: a
+            } = t;
+            e(null, {
+              status: s,
+              statusCode: i,
+              headers: o,
+              body: r,
+              bodyBytes: a
+            }, r, a);
+          }, t => e(t && t.error || "UndefinedError"));
+          break;
+        case "Node.js":
+          let s = require("iconv-lite");
+          this.initGotEnv(t), this.got(t).on("redirect", (t, e) => {
+            try {
+              if (t.headers["set-cookie"]) {
+                const s = t.headers["set-cookie"].map(this.cktough.Cookie.parse).toString();
+                s && this.ckjar.setCookieSync(s, null);
+                e.cookieJar = this.ckjar;
+              }
+            } catch (t) {
+              this.logErr(t);
+            }
+          }).then(t => {
+            const {
+                statusCode: i,
+                statusCode: o,
+                headers: r,
+                rawBody: a
+              } = t,
+              n = s.decode(a, this.encoding);
+            e(null, {
+              status: i,
+              statusCode: o,
+              headers: r,
+              rawBody: a,
+              body: n
+            }, n);
+          }, t => {
+            const {
+              message: i,
+              response: o
+            } = t;
+            e(i, o, o && s.decode(o.rawBody, this.encoding));
+          });
+          break;
+      }
+    }
+    post(t, e = () => {}) {
+      const s = t.method ? t.method.toLocaleLowerCase() : "post";
+      switch (t.body && t.headers && !t.headers["Content-Type"] && !t.headers["content-type"] && (t.headers["content-type"] = "application/x-www-form-urlencoded"), t.headers && (delete t.headers["Content-Length"], delete t.headers["content-length"]), void 0 === t.followRedirect || t.followRedirect || ((this.isSurge() || this.isLoon()) && (t["auto-redirect"] = !1), this.isQuanX() && (t.opts ? t.opts.redirection = !1 : t.opts = {
+        redirection: !1
+      })), this.getEnv()) {
+        case "Surge":
+        case "Loon":
+        case "Stash":
+        case "Shadowrocket":
+        default:
+          this.isSurge() && this.isNeedRewrite && (t.headers = t.headers || {}, Object.assign(t.headers, {
+            "X-Surge-Skip-Scripting": !1
+          })), $httpClient[s](t, (t, s, i) => {
+            !t && s && (s.body = i, s.statusCode = s.status ? s.status : s.statusCode, s.status = s.statusCode);
+            e(t, s, i);
+          });
+          break;
+        case "Quantumult X":
+          t.method = s, this.isNeedRewrite && (t.opts = t.opts || {}, Object.assign(t.opts, {
+            hints: !1
+          })), $task.fetch(t).then(t => {
+            const {
+              statusCode: s,
+              statusCode: i,
+              headers: o,
+              body: r,
+              bodyBytes: a
+            } = t;
+            e(null, {
+              status: s,
+              statusCode: i,
+              headers: o,
+              body: r,
+              bodyBytes: a
+            }, r, a);
+          }, t => e(t && t.error || "UndefinedError"));
+          break;
+        case "Node.js":
+          let i = require("iconv-lite");
+          this.initGotEnv(t);
+          const {
+            url: o,
+            ...r
+          } = t;
+          this.got[s](o, r).then(t => {
+            const {
+                statusCode: s,
+                statusCode: o,
+                headers: r,
+                rawBody: a
+              } = t,
+              n = i.decode(a, this.encoding);
+            e(null, {
+              status: s,
+              statusCode: o,
+              headers: r,
+              rawBody: a,
+              body: n
+            }, n);
+          }, t => {
+            const {
+              message: s,
+              response: o
+            } = t;
+            e(s, o, o && i.decode(o.rawBody, this.encoding));
+          });
+          break;
+      }
+    }
+    time(t, e = null) {
+      const s = e ? new Date(e) : new Date();
+      let i = {
+        "M+": s.getMonth() + 1,
+        "d+": s.getDate(),
+        "H+": s.getHours(),
+        "m+": s.getMinutes(),
+        "s+": s.getSeconds(),
+        "q+": Math.floor((s.getMonth() + 3) / 3),
+        S: s.getMilliseconds()
+      };
+      /(y+)/.test(t) && (t = t.replace(RegExp.$1, (s.getFullYear() + "").substr(4 - RegExp.$1.length)));
+      for (let e in i) new RegExp("(" + e + ")").test(t) && (t = t.replace(RegExp.$1, 1 == RegExp.$1.length ? i[e] : ("00" + i[e]).substr(("" + i[e]).length)));
+      return t;
+    }
+    queryStr(t) {
+      let e = "";
+      for (const s in t) {
+        let i = t[s];
+        null != i && "" !== i && ("object" == typeof i && (i = JSON.stringify(i)), e += `${s}=${i}&`);
+      }
+      return e = e.substring(0, e.length - 1), e;
+    }
+    msg(e = t, s = "", i = "", o = {}) {
+      const r = t => {
+        const {
+          $open: e,
+          $copy: s,
+          $media: i,
+          $mediaMime: o
+        } = t;
+        switch (typeof t) {
+          case void 0:
+            return t;
+          case "string":
+            switch (this.getEnv()) {
+              case "Surge":
+              case "Stash":
+              default:
+                return {
+                  url: t
+                };
+              case "Loon":
+              case "Shadowrocket":
+                return t;
+              case "Quantumult X":
+                return {
+                  "open-url": t
+                };
+              case "Node.js":
+                return;
+            }
+          case "object":
+            switch (this.getEnv()) {
+              case "Surge":
+              case "Stash":
+              case "Shadowrocket":
+              default:
+                {
+                  const r = {};
+                  let a = t.openUrl || t.url || t["open-url"] || e;
+                  a && Object.assign(r, {
+                    action: "open-url",
+                    url: a
+                  });
+                  let n = t["update-pasteboard"] || t.updatePasteboard || s;
+                  if (n && Object.assign(r, {
+                    action: "clipboard",
+                    text: n
+                  }), i) {
+                    let t, e, s;
+                    if (i.startsWith("http")) t = i;else if (i.startsWith("data:")) {
+                      const [t] = i.split(";"),
+                        [, o] = i.split(",");
+                      e = o;
+                      s = t.replace("data:", "");
+                    } else {
+                      e = i;
+                      s = (t => {
+                        const e = {
+                          JVBERi0: "application/pdf",
+                          R0lGODdh: "image/gif",
+                          R0lGODlh: "image/gif",
+                          iVBORw0KGgo: "image/png",
+                          "/9j/": "image/jpg"
+                        };
+                        for (var s in e) if (0 === t.indexOf(s)) return e[s];
+                        return null;
+                      })(i);
+                    }
+                    Object.assign(r, {
+                      "media-url": t,
+                      "media-base64": e,
+                      "media-base64-mime": o ?? s
+                    });
+                  }
+                  return Object.assign(r, {
+                    "auto-dismiss": t["auto-dismiss"],
+                    sound: t.sound
+                  }), r;
+                }
+              case "Loon":
+                {
+                  const s = {};
+                  let o = t.openUrl || t.url || t["open-url"] || e;
+                  o && Object.assign(s, {
+                    openUrl: o
+                  });
+                  let r = t.mediaUrl || t["media-url"];
+                  return i?.startsWith("http") && (r = i), r && Object.assign(s, {
+                    mediaUrl: r
+                  }), console.log(JSON.stringify(s)), s;
+                }
+              case "Quantumult X":
+                {
+                  const o = {};
+                  let r = t["open-url"] || t.url || t.openUrl || e;
+                  r && Object.assign(o, {
+                    "open-url": r
+                  });
+                  let a = t["media-url"] || t.mediaUrl;
+                  i?.startsWith("http") && (a = i);
+                  a && Object.assign(o, {
+                    "media-url": a
+                  });
+                  let n = t["update-pasteboard"] || t.updatePasteboard || s;
+                  return n && Object.assign(o, {
+                    "update-pasteboard": n
+                  }), console.log(JSON.stringify(o)), o;
+                }
+              case "Node.js":
+                return;
+            }
+          default:
+            return;
+        }
+      };
+      if (!this.isMute) switch (this.getEnv()) {
+        case "Surge":
+        case "Loon":
+        case "Stash":
+        case "Shadowrocket":
+        default:
+          $notification.post(e, s, i, r(o));
+          break;
+        case "Quantumult X":
+          $notify(e, s, i, r(o));
+          break;
+        case "Node.js":
+          break;
+      }
+      if (!this.isMuteLog) {
+        let t = ["", "==============📣系统通知📣=============="];
+        t.push(e);
+        s && t.push(s);
+        i && t.push(i);
+        console.log(t.join("\n"));
+        this.logs = this.logs.concat(t);
+      }
+    }
+    debug(...t) {
+      this.logLevels[this.logLevel] <= this.logLevels.debug && (t.length > 0 && (this.logs = [...this.logs, ...t]), console.log(`${this.logLevelPrefixs.debug}${t.map(t => t ?? String(t)).join(this.logSeparator)}`));
+    }
+    info(...t) {
+      this.logLevels[this.logLevel] <= this.logLevels.info && (t.length > 0 && (this.logs = [...this.logs, ...t]), console.log(`${this.logLevelPrefixs.info}${t.map(t => t ?? String(t)).join(this.logSeparator)}`));
+    }
+    warn(...t) {
+      this.logLevels[this.logLevel] <= this.logLevels.warn && (t.length > 0 && (this.logs = [...this.logs, ...t]), console.log(`${this.logLevelPrefixs.warn}${t.map(t => t ?? String(t)).join(this.logSeparator)}`));
+    }
+    error(...t) {
+      this.logLevels[this.logLevel] <= this.logLevels.error && (t.length > 0 && (this.logs = [...this.logs, ...t]), console.log(`${this.logLevelPrefixs.error}${t.map(t => t ?? String(t)).join(this.logSeparator)}`));
+    }
+    log(...t) {
+      t.length > 0 && (this.logs = [...this.logs, ...t]);
+      console.log(t.map(t => t ?? String(t)).join(this.logSeparator));
+    }
+    logErr(t, e) {
+      switch (this.getEnv()) {
+        case "Surge":
+        case "Loon":
+        case "Stash":
+        case "Shadowrocket":
+        case "Quantumult X":
+        default:
+          this.log("", `❗️${this.name}, 错误!`, e, t);
+          break;
+        case "Node.js":
+          this.log("", `❗️${this.name}, 错误!`, e, void 0 !== t.message ? t.message : t, t.stack);
+          break;
+      }
+    }
+    wait(t) {
+      return new Promise(e => setTimeout(e, t));
+    }
+    done(t = {}) {
+      const e = (new Date().getTime() - this.startTime) / 1000;
+      switch (this.log("", `🔔${this.name}, 结束! 🕛 ${e} 秒`), this.log(), this.getEnv()) {
+        case "Surge":
+        case "Loon":
+        case "Stash":
+        case "Shadowrocket":
+        case "Quantumult X":
+        default:
+          $done(t);
+          break;
+        case "Node.js":
+          process.exit(1);
+      }
+    }
+  }(t, e);
+}
