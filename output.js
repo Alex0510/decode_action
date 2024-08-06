@@ -1,61 +1,39 @@
-//Tue Jul 23 2024 11:59:56 GMT+0000 (Coordinated Universal Time)
+//Tue Aug 06 2024 14:05:17 GMT+0000 (Coordinated Universal Time)
 //Base:https://github.com/echo094/decode-js
 //Modify:https://github.com/smallfawn/decode_action
-var encode_version = "jsjiami.com.v5";
-document.onkeydown = function () {
-  var _0x3ba18c = event || window.event || arguments.callee.caller.arguments[0];
-  if (_0x3ba18c.keyCode == 123) {
-    return false;
-  } else {
-    if (_0x3ba18c.ctrlKey && _0x3ba18c.shiftKey && _0x3ba18c.keyCode == 73) {
-      return false;
-    } else {
-      if (_0x3ba18c.shiftKey && _0x3ba18c.keyCode == 121) {
-        return false;
-      } else {
-        if (_0x3ba18c.ctrlKey && _0x3ba18c.keyCode == 85) {
-          return false;
-        }
-      }
-    }
-  }
-};
-document.oncontextmenu = function () {
-  return false;
-};
-function isConsoleOpen() {
-  var _0x475b29 = 0,
-    _0x3162c9 = 0;
-  _0x475b29 = new Date();
-  debugger;
-  _0x3162c9 = new Date();
-  if (_0x3162c9 - _0x475b29 > 100) {
-    window.location.replace("https://baidu.com/");
-  }
+const ciphertext = $response.body,
+  trimmedCiphertext = ciphertext.startsWith("2") ? ciphertext.slice(1) : ciphertext,
+  key = CryptoJS.enc.Utf8.parse("n84mUckz"),
+  iv = CryptoJS.enc.Utf8.parse("n84mUckz");
+try {
+  const decryptedBytes = CryptoJS.DES.decrypt(trimmedCiphertext, key, {
+      "iv": iv,
+      "mode": CryptoJS.mode.CBC,
+      "padding": CryptoJS.pad.Pkcs7
+    }),
+    decryptedText = decryptedBytes.toString(CryptoJS.enc.Utf8);
+  if (!decryptedText) throw new Error("Decryption failed or produced empty result.");
+  let modifiedText = decryptedText;
+  modifiedText = modifiedText.replace(/isLock":\s*\d/g, "isLock\": 1");
+  modifiedText = modifiedText.replace(/IsSVIPPic":\s*\d/g, "IsSVIPPic\": 1");
+  modifiedText = modifiedText.replace(/userName":\s*".*?"/g, "userName\": \"TG@iuiuiui1\"");
+  modifiedText = modifiedText.replace(/applePayPrice":\s*"\d+"/g, "applePayPrice\": \"0\"");
+  modifiedText = modifiedText.replace(/price":\s*\d+/g, "price\": 0");
+  modifiedText = modifiedText.replace(/lockType":\s*\d+/g, "lockType\": 0");
+  modifiedText = modifiedText.replace(/downloadAdType":\s*\d+/g, "downloadAdType\": 1");
+  modifiedText = modifiedText.replace(/"vipInfo"\s*:\s*null/g, "\"vipInfo\": {\"vipLevel\": 3, \"isVip\": true, \"isAuto\": true, \"iphoneTag\": \"\", \"ratio\": 0.7, \"rechargeLevel\": 1, \"endDate\": \"2099-09-09\"}");
+  const encryptedBody = CryptoJS.DES.encrypt(modifiedText, key, {
+      "iv": iv,
+      "mode": CryptoJS.mode.CBC,
+      "padding": CryptoJS.pad.Pkcs7
+    }).toString(),
+    finalEncryptedBody = "2" + encryptedBody;
+  $done({
+    "body": finalEncryptedBody
+  });
+} catch (iii1Il) {
+  console.error("Error during decryption or processing:", iii1Il.message);
+  $done({
+    "body": ciphertext
+  });
 }
-const paramsVal = "tz";
-if (window.location.href.indexOf("debug=" + paramsVal) > -1 || window.sessionStorage.getItem("debug") && window.sessionStorage.getItem("debug") == paramsVal) {
-  window.sessionStorage.setItem("debug", paramsVal);
-} else {
-  setInterval(function () {
-    isConsoleOpen();
-    (function (_0x1c641f) {
-      return function (_0x1e3b6f) {
-        return Function("Function(arguments[0]+\"" + _0x1e3b6f + "\")()");
-      }(_0x1c641f);
-    })("bugger")("de", 0, 0, (0, 0));
-  }, 1000);
-}
-(function (_0x365a46, _0x390e4a, _0x1c9053) {
-  _0x1c9053 = "al";
-  try {
-    _0x1c9053 += "ert";
-    _0x390e4a = encode_version;
-    if (!(typeof _0x390e4a !== "undefined" && _0x390e4a === "jsjiami.com.v5")) {
-      _0x365a46[_0x1c9053]("删除版本号，js会定期弹窗，还请支持我们的工作");
-    }
-  } catch (_0x54edc6) {
-    _0x365a46[_0x1c9053]("删除版本号，js会定期弹窗");
-  }
-})(window);
-encode_version = "jsjiami.com.v5";
